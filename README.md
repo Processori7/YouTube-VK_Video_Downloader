@@ -1,7 +1,11 @@
 # YouTube/VK_Video_Dawnloader
 Это многофункциональный загрузчик видео с площадок YouTube и ВК.
 Данная программа можем скачивать все видео с канала YouTube, скачивать все из PlayList, или скачивать видео по ссылке. 
-Внимание! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+
+Внимание! 
+Внимание! 
+Внимание! 
+
 Для корректной работы программы сначала выполните: pip install pytube3, затем переидите в папку Python\Lib\site-packages и переименуйте папку pytube в pytube3, после этого выполните: pip install pytube. 
 Можно собрать из этого скрипта .exe файл под ОС Windows, для этого выполните: pip install auto-py-to-exe, после завершения установки в консоли выполните: auto-py-to-exe, запустится графическая оболочка модуля pyinstaller, далее:
 1) Выбирете файл(скрипт)
@@ -14,7 +18,11 @@ ________________________________________________________________________________
 
 This is a multifunctional video downloader from YouTube and VK sites.
 This program can download all videos from YouTube channel, download all from PlayList, or download videos from the link.
-Attention! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
+
+Attention! 
+Attention!
+Attention!
+
 For the program to work correctly, first run: pip install pytube3, then go to the Python\Lib\site-packages folder and rename the pytube folder to pytube3, then run: pip install pytube.
 You can assemble an .exe file from this script under Windows OS, to do this, run: pip install auto-py-to-exe, after the installation is completed in the console, run: auto-py-to-exe, the graphical shell of the pyinstaller module will start, then:
 1) Select a file (script)
