@@ -14,7 +14,9 @@
 4) В разделе Additional files добавьте папки с указанием абсолютных путей: pytube/,  youtube_dl/, pytube3/
 5) В разделе Settings, в поле Output Directory укажите место, где появится созданный исполняемый файл.
 6) Нажмите кнопку 'Convert .py to .exe', дождитесь окончания процесса сборки и запустите готовый файл.
-_________________________________________________________________________________________________________________________________________________________________________
+
+Либо вы можетенастроить файл Settings.json под себя. Для этого в разделе Settings нажмите на кнопку 'Import Config From Json Files' и выберите Settings.json, далее следуя инструкции выше заполните нужные разделы.
+_______________________________________________________________________________________________________________________________________________________________________
 
 This is a multifunctional video downloader from YouTube and VK sites.
 This program can download all videos from YouTube channel, download all from PlayList, or download videos from the link.
@@ -31,3 +33,5 @@ You can assemble an .exe file from this script under Windows OS, to do this, run
 4) In the Additional files section, add folders with absolute paths: pytube/, youtube_dl/, pytube3/
 5) In the Settings section, in the Output Directory field, specify the location where the created executable file will appear.
 6) Click the 'Convert .py to .exe' button, wait for the build process to finish and run the finished file.
+
+Or you can customize the Settings.json file for yourself. To do this, in the Settings section, click on the 'Import Config From Json Files' button and select Settings.json, then follow the instructions above to fill in the required sections.
