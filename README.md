@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 This is a multifunctional video downloader from YouTube and VK sites.
 This program can download all videos from YouTube channel, download all from PlayList, or download videos from the link.
-Attention! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+Attention! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 For the program to work correctly, first run: pip install pytube3, then go to the Python\Lib\site-packages folder and rename the pytube folder to pytube3, then run: pip install pytube.
 You can assemble an .exe file from this script under Windows OS, to do this, run: pip install auto-py-to-exe, after the installation is completed in the console, run: auto-py-to-exe, the graphical shell of the pyinstaller module will start, then:
 1) Select a file (script)
