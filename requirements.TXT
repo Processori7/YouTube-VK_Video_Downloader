@@ -1,4 +1,1 @@
-pytube
-youtube_dl
-pytube3
-requests
+yt_dlp
