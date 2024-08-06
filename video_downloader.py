@@ -45,11 +45,11 @@ while True:
                                 break
                             else:
                                 ydl.download([video_url])  # Загрузка видео
-
-                if 'watch?v=' in url or 'https://youtu.be/' in url or 'shorts/' in url:
+                if ('watch?v=' in url or 'https://youtu.be/' in url or 'shorts/' in url or
+                    'https://vk.com/video' in url or 'https://rutube.ru/video/' in url):
                     download(url)
 
-                if 'https://www.youtube.com/channel/' in url:
+                if 'https://www.youtube.com/channel/' in url or 'https://rutube.ru/channel/' in url:
                     download(url)
 
                 if 'выход' in url:
