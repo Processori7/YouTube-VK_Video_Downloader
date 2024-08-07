@@ -1,9 +1,54 @@
-import traceback
 import sys
 import os
+import re
 import yt_dlp
+import webbrowser
+import requests
+import traceback
 from yt_dlp import YoutubeDL
+from packaging import version
+from tkinter import messagebox
 
+
+CURRENT_VERSION = "1.2"
+
+def update_app(update_url):
+   webbrowser.open(update_url)
+
+
+def check_for_updates():
+    try:
+        # Получение информации о последнем релизе на GitHub
+        response = requests.get("https://api.github.com/repos/Processori7/YouTube-VK_Video_Downloader/releases/latest")
+        response.raise_for_status()
+        latest_release = response.json()
+
+        # Получение ссылки на файл exe последней версии
+        assets = latest_release["assets"]
+        for asset in assets:
+            if asset["name"].endswith(".exe"):
+                download_url = asset["browser_download_url"]
+                break
+        else:
+            messagebox.showerror("Ошибка обновления", "Не удалось найти файл exe для последней версии.")
+            return
+
+        # Сравнение текущей версии с последней версией
+        latest_version_str = latest_release["tag_name"]
+        match = re.search(r'\d+\.\d+', latest_version_str)
+        if match:
+            latest_version = match.group()
+        else:
+            latest_version = latest_version_str
+
+        if version.parse(latest_version) > version.parse(CURRENT_VERSION):
+            # Предложение пользователю обновление
+            if messagebox.showwarning("Доступно обновление",
+                                      f"Доступна новая версия {latest_version}. Хотите обновить?", icon='warning',
+                                      type='yesno') == 'yes':
+                update_app(download_url)
+    except requests.exceptions.RequestException as e:
+            messagebox.showerror("Ошибка при проверке обновлений", e)
 
 while True:
     try:
@@ -45,8 +90,16 @@ while True:
                                 break
                             else:
                                 ydl.download([video_url])  # Загрузка видео
-                if ('watch?v=' in url or 'https://youtu.be/' in url or 'shorts/' in url or
-                    'https://vk.com/video' in url or 'https://rutube.ru/video/' in url):
+                video_platforms = [
+                    'watch?v=',
+                    'https://youtu.be/',
+                    'shorts/',
+                    'https://vk.com/video',
+                    'https://rutube.ru/video/',
+                    'https://my.mail.ru//community/gotivim.mm/video/',
+                    'http://ok.ru/video/'
+                ]
+                if any(platform in url for platform in video_platforms):
                     download(url)
 
                 if 'https://www.youtube.com/channel/' in url or 'https://rutube.ru/channel/' in url:
@@ -106,6 +159,7 @@ while True:
                 print(info + '\n')
 
         if __name__ == '__main__':
+            check_for_updates()
             # Получаем ссылку и подтвержение на загрузку видео.
             url = input('Вставьте ссылку или напишите выход: ')
             print('\n')

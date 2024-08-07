@@ -1,1 +1,4 @@
 yt_dlp
+webbrowser
+packaging
+requests
